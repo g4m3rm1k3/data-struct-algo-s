@@ -11,6 +11,7 @@ def bubble(sorted_list, reverse=False):
   amount = len(sorted_list)
   counter = 0
   for i in range(len(sorted_list)-1):
+    print(sorted_list)
     swap = False
     amount -= 1
     for i in range(amount):
