@@ -15,8 +15,8 @@ def merge_sorted(arr1, arr2):
   while i < len(arr1):
     sorted_arr.append(arr1[i])
     i += 1
-  while j <  len(arr2):
-    sorted_arr.append(arr2[i])
+  while j < len(arr2):
+    sorted_arr.append(arr2[j])
     j += 1
   return sorted_arr
 
@@ -32,13 +32,14 @@ def divide_arr(arr):
     print("Right split", arr[middle:])
     l1 = divide_arr(arr[:middle])
     l2 = divide_arr(arr[middle:])
+    return(merge_sorted(l1, l2))
     # implied return None
 
 
-# l = [6, 8, 1, 4, 10, 7, 8, 9, 3, 2, 5]
-l = [8, 6, 2, 5]
-divide_arr(l)
+l = [6, 8, 1, 4, 10, 7, 8, 9, 3, 2, 5]
+# l = [8, 6, 2, 5]
+print(divide_arr(l))
 
 # XXXXXXXXXXX PROGRAM EXECUTION XXXXXXXXXX
-l1 = [2,4,6,8,10]
-l2 = [1,3,5,7,8,9]
+# l1 = [2,4,6,8,10]
+# l2 = [1,3,5,7,8,9]
