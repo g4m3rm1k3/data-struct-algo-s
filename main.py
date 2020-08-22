@@ -1,7 +1,5 @@
-from hash_map import AlgoHashTable
+from hash_table_project import gen_hash
 
-hash_table = AlgoHashTable(256)
+hash_table = gen_hash(256)
 # print(hash_table)
-
-hash_table.set_val("g4m3rm1k3@hotmail.com", {'first_name;': "Michael", 'last_name: ':" McLean"})
-print(hash_table)
+print(hash_table.get_val("g4m3rm1k3@hotmail.com"))
