@@ -22,3 +22,14 @@ def find_pairs_of_ten(pairs):
 print(find_pairs_of_ten(list_in))
 
 print(list_in)
+
+# import itertools
+
+# numbers = [1,2,3,4,5,6,7,8,9]
+# combinations = itertools.combinations(numbers, 2)
+# result = []
+# for x, y in combinations:
+#   if (x + y == 10):
+#     result.append((x, y))
+
+# print(result)
