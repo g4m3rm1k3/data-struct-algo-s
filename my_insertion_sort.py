@@ -1,7 +1,7 @@
 
 count = 0
 
-def my_insertion_sort(iter_list):
+def insertion_sort(iter_list):
 
 
   def swap(iter_list):

@@ -1,10 +1,10 @@
-def my_selection_sort(iter_nums):
+def selection_sort(iter_nums):
   swap = True
   marker = 0
   count = 0
 
   while swap:
-    print(iter_nums)
+    # print(iter_nums)
     swap = False
     marker += 1
 

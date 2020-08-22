@@ -8,7 +8,7 @@ def bubble(sorted_list, reverse=False):
   amount = len(sorted_list)
 
   for i in range(len(sorted_list)-1):
-    print(sorted_list)
+    # print(sorted_list)
     swap = False
     amount -= 1
 
