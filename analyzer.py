@@ -7,7 +7,7 @@ def create_random_list(size, max_val):
 
 size  = int(input("What size list do you want to create: "))
 max = int(input("What is the max value of the range: "))
-runs = input("How many times do you want to run the function: ") or 1
+runs = input("How many times do you want to run the function: ") or 0
 skip = input("Enter functions to skip: ") or None
 print('\n\n\n')
 
@@ -17,7 +17,7 @@ if skip:
 l = create_random_list(size, max)
 
 def check_o(size, max, runs = 1, *args):
-  functions = [quicksort,mergesort,bubble, selection_sort, insertion_sort]
+  functions = [quicksort,mergesort,bubble, selection_sort, insertion_sort, sorted]
 
   for function in functions:
 
@@ -29,10 +29,10 @@ def check_o(size, max, runs = 1, *args):
       start = time()
       function(l)
       end = time()
-      print(f"{function.__name__.capitalize() + '.'*(20-(len(function.__name__)))}\t {end - start}\
- to sort a list {size} long")
-  while runs > 0:
-    print(f"{runs} more runs... \n\n")
+      name = f"{function.__name__.capitalize() + '.'*(20-(len(function.__name__)))}\tTime elapsed = {end - start:.5f}"
+      print(name)
+  while runs > 1:
+    print(f"{runs-1} more {''.join(['runs' if runs > 2 else'run'])} \n{'-' * (len(name)+3)} \n")
     return check_o(size, max, runs-1, args)
 
 check_o(size, max, int(runs), skip)
