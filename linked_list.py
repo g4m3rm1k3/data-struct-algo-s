@@ -1,3 +1,5 @@
+from math import factorial
+
 class Node:
 
   def __init__(self, data=None):
@@ -82,10 +84,49 @@ class LinkedList:
       count += 1
     return count
 
-  def reverse_list_recur(self, current, previous):
+  def reverse_list_recur(self, current, previous=None):
     '''reverse the sequence of node pointers in the linked list'''
-    current = self.tail
-    while current is not None:
+    if self.head == None:
+       return
+    elif current.next == None:
+      self.tail = self.head
+      current.next = previous
+      self.head = current
+    else:
+      next = current.next
+      current.next = previous
+      self.reverse_list_recur(next, current)
 
+      
+    # code I learned form Geeks for Geeks
+    # prev = None
+    # current = self.head 
+    # while(current is not None): 
+    #     next = current.next
+    #     current.next = prev
+    #     prev = current 
+    #     current = next
+    # self.head = prev 
 
+# my_list = LinkedList()
+
+# for i in range(10):
+#   my_list.append_val(i)
+
+# print(my_list)
+
+# my_list.add_to_start(5)
+# my_list.add_to_start(15)
+# my_list.add_to_start(35)
+# my_list.add_to_start(52)
+# print(my_list)
+# print(my_list.length())
+# print(my_list.search_val(5))
+# my_list.remove_val_by_index(my_list.search_val(5))
+# my_list.remove_val_by_index(my_list.search_val(5))
+# print(my_list.search_val(15))
+# print(my_list)
+# print(my_list.length())
+# print(my_list.reverse_list_recur(my_list.head,None))
+# print(my_list)
   
